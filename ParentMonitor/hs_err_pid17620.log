@@ -1,0 +1,19 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (thread.cpp:1542), pid=17620, tid=0x00000000000026d4
+#  guarantee(cur_sp > stack_yellow_zone_base()) failed: not enough space to reguard - increase StackShadowPages
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_171-b11) (build 1.8.0_171-b11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.171-b11 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000201d9000):  JavaThread "pool-1-thread-298" [_thread_in_vm, id=9940, stack(0x0000000034800000,0x0000000034900000)]
+
+Stack: [0x0000000034800000,0x0000000034900000]

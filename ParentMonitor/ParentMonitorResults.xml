@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1542129430000" analysisTimestamp="1542129448133" release="">
+  <Project projectName="">
+    <Jar>C:\Users\zwill\Documents\GitHub\Parent-Monitor\ParentMonitor\dist\ParentMonitor.jar</Jar>
+    <SrcDir>C:\Users\zwill\Documents\GitHub\Parent-Monitor\ParentMonitor\src</SrcDir>
+  </Project>
+  <BugInstance type="SC_START_IN_CTOR" priority="2" rank="14" abbrev="SC" category="MT_CORRECTNESS">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Method classname="Server.ClientPanel" name="&lt;init&gt;" signature="(LServer/ServerFrame;Ljava/lang/String;LServer/ImageSocket;)V" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" start="40" end="57" startBytecode="0" endBytecode="247" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Method>
+    <Method classname="java.lang.Thread" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Thread"/>
+    </Method>
+    <SourceLine classname="Server.ClientPanel" start="55" end="55" startBytecode="120" endBytecode="120" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+  </BugInstance>
+  <BugInstance type="SC_START_IN_CTOR" priority="3" rank="17" abbrev="SC" category="MT_CORRECTNESS">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Method classname="Server.ClientPanel" name="&lt;init&gt;" signature="(LServer/ServerFrame;Ljava/lang/String;LServer/ImageSocket;)V" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" start="40" end="57" startBytecode="0" endBytecode="247" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Method>
+    <Method classname="Server.ClientPanel$ImageRetrieverWorkerThread" name="start" signature="()V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="Server.ClientPanel$ImageRetrieverWorkerThread" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Method>
+    <SourceLine classname="Server.ClientPanel" start="56" end="56" startBytecode="132" endBytecode="132" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Field classname="Server.ClientPanel" name="buffer" signature="Ljava/awt/image/BufferedImage;" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Field>
+    <Type descriptor="Ljava/awt/image/BufferedImage;" role="TYPE_FOUND">
+      <SourceLine classname="java.awt.image.BufferedImage"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Field classname="Server.ClientPanel" name="imageConnection" signature="LServer/ImageSocket;" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Field>
+    <Type descriptor="LServer/ImageSocket;" role="TYPE_FOUND">
+      <SourceLine classname="Server.ImageSocket" start="21" end="86" sourcefile="ImageSocket.java" sourcepath="Server/ImageSocket.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Field classname="Server.ClientPanel" name="previousScreenShot" signature="Ljava/awt/image/BufferedImage;" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Field>
+    <Type descriptor="Ljava/awt/image/BufferedImage;" role="TYPE_FOUND">
+      <SourceLine classname="java.awt.image.BufferedImage"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Field classname="Server.ClientPanel" name="repaint" signature="LUtil/ThreadSafeBoolean;" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Field>
+    <Type descriptor="LUtil/ThreadSafeBoolean;" role="TYPE_FOUND">
+      <SourceLine classname="Util.ThreadSafeBoolean" start="5" end="52" sourcefile="ThreadSafeBoolean.java" sourcepath="Util/ThreadSafeBoolean.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ClientPanel">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Class>
+    <Field classname="Server.ClientPanel" name="terminated" signature="LUtil/ThreadSafeBoolean;" isStatic="false">
+      <SourceLine classname="Server.ClientPanel" sourcefile="ClientPanel.java" sourcepath="Server/ClientPanel.java"/>
+    </Field>
+    <Type descriptor="LUtil/ThreadSafeBoolean;" role="TYPE_FOUND">
+      <SourceLine classname="Util.ThreadSafeBoolean" start="5" end="52" sourcefile="ThreadSafeBoolean.java" sourcepath="Util/ThreadSafeBoolean.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ImageBank$ListDisplayer$1">
+      <SourceLine classname="Server.ImageBank$ListDisplayer$1" sourcefile="ImageBank.java" sourcepath="Server/ImageBank.java"/>
+    </Class>
+    <Field classname="Server.ImageBank$ListDisplayer$1" name="val$this$0" signature="LServer/ImageBank;" isStatic="false">
+      <SourceLine classname="Server.ImageBank$ListDisplayer$1" sourcefile="ImageBank.java" sourcepath="Server/ImageBank.java"/>
+    </Field>
+    <Type descriptor="LServer/ImageBank;" role="TYPE_FOUND">
+      <SourceLine classname="Server.ImageBank" start="37" end="84" sourcefile="ImageBank.java" sourcepath="Server/ImageBank.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SA_FIELD_DOUBLE_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE">
+    <Class classname="Server.LocalPortSocketAddress">
+      <SourceLine classname="Server.LocalPortSocketAddress" sourcefile="LocalPortSocketAddress.java" sourcepath="Server/LocalPortSocketAddress.java"/>
+    </Class>
+    <Method classname="Server.LocalPortSocketAddress" name="setLocalPort" signature="(I)V" isStatic="false">
+      <SourceLine classname="Server.LocalPortSocketAddress" start="24" end="26" startBytecode="0" endBytecode="73" sourcefile="LocalPortSocketAddress.java" sourcepath="Server/LocalPortSocketAddress.java"/>
+    </Method>
+    <Field classname="Server.LocalPortSocketAddress" name="localPort" signature="Ljava/lang/Integer;" isStatic="false">
+      <SourceLine classname="Server.LocalPortSocketAddress" sourcefile="LocalPortSocketAddress.java" sourcepath="Server/LocalPortSocketAddress.java"/>
+    </Field>
+    <SourceLine classname="Server.LocalPortSocketAddress" start="25" end="25" startBytecode="10" endBytecode="10" sourcefile="LocalPortSocketAddress.java" sourcepath="Server/LocalPortSocketAddress.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE">
+    <Class classname="Server.NetworkScanner">
+      <SourceLine classname="Server.NetworkScanner" sourcefile="NetworkScanner.java" sourcepath="Server/NetworkScanner.java"/>
+    </Class>
+    <Method classname="Server.NetworkScanner" name="convertPrefixLengthToIPv4Address" signature="(I)[I" isStatic="true">
+      <SourceLine classname="Server.NetworkScanner" start="341" end="359" startBytecode="0" endBytecode="308" sourcefile="NetworkScanner.java" sourcepath="Server/NetworkScanner.java"/>
+    </Method>
+    <SourceLine classname="Server.NetworkScanner" start="355" end="355" startBytecode="66" endBytecode="66" sourcefile="NetworkScanner.java" sourcepath="Server/NetworkScanner.java"/>
+  </BugInstance>
+  <BugInstance type="DM_GC" priority="1" rank="16" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="Server.NetworkScanner$GarbageCollectorThread">
+      <SourceLine classname="Server.NetworkScanner$GarbageCollectorThread" sourcefile="NetworkScanner.java" sourcepath="Server/NetworkScanner.java"/>
+    </Class>
+    <Method classname="Server.NetworkScanner$GarbageCollectorThread" name="run" signature="()V" isStatic="false">
+      <SourceLine classname="Server.NetworkScanner$GarbageCollectorThread" start="71" end="86" startBytecode="0" endBytecode="206" sourcefile="NetworkScanner.java" sourcepath="Server/NetworkScanner.java"/>
+    </Method>
+    <SourceLine classname="Server.NetworkScanner$GarbageCollectorThread" start="83" end="83" startBytecode="49" endBytecode="49" sourcefile="NetworkScanner.java" sourcepath="Server/NetworkScanner.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" rank="17" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="text" signature="LServer/TextPanel;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="Server.ParentPanel" start="154" end="154" startBytecode="14" endBytecode="14" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="281" end="281" startBytecode="38" endBytecode="38" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="254" end="254" startBytecode="114" endBytecode="114" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="255" end="255" startBytecode="122" endBytecode="122" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="256" end="256" startBytecode="130" endBytecode="130" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="257" end="257" startBytecode="138" endBytecode="138" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" rank="17" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="textConnection" signature="LServer/TextSocket;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="Server.ParentPanel" start="272" end="272" startBytecode="1" endBytecode="1" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="235" end="235" startBytecode="25" endBytecode="25" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="242" end="242" startBytecode="78" endBytecode="78" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="243" end="243" startBytecode="86" endBytecode="86" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="3" rank="20" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="clientEnvironment" signature="Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="Server.ParentPanel" start="139" end="139" startBytecode="11" endBytecode="11" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="259" end="259" startBytecode="142" endBytecode="142" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="260" end="260" startBytecode="152" endBytecode="152" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <Property name="edu.umd.cs.findbugs.detect.InconsistentSyncWarningProperty.ONLY_UNSYNC_IN_GETTERS" value="true"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="3" rank="20" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="clientInfoFrame" signature="LServer/TextFrame;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="Server.ParentPanel" start="176" end="176" startBytecode="1" endBytecode="1" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="264" end="264" startBytecode="161" endBytecode="161" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="265" end="265" startBytecode="169" endBytecode="169" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <Property name="edu.umd.cs.findbugs.detect.InconsistentSyncWarningProperty.ONLY_UNSYNC_IN_GETTERS" value="true"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="3" rank="20" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="split" signature="Ljavax/swing/JSplitPane;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Int value="66" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="Server.ParentPanel" start="129" end="129" startBytecode="1" endBytecode="1" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="245" end="245" startBytecode="90" endBytecode="90" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="Server.ParentPanel" start="246" end="246" startBytecode="98" endBytecode="98" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <Property name="edu.umd.cs.findbugs.detect.InconsistentSyncWarningProperty.ONLY_UNSYNC_IN_GETTERS" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="terminated" signature="LUtil/ThreadSafeBoolean;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Type descriptor="LUtil/ThreadSafeBoolean;" role="TYPE_FOUND">
+      <SourceLine classname="Util.ThreadSafeBoolean" start="5" end="52" sourcefile="ThreadSafeBoolean.java" sourcepath="Util/ThreadSafeBoolean.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ParentPanel">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Class>
+    <Field classname="Server.ParentPanel" name="textConnection" signature="LServer/TextSocket;" isStatic="false">
+      <SourceLine classname="Server.ParentPanel" sourcefile="ParentPanel.java" sourcepath="Server/ParentPanel.java"/>
+    </Field>
+    <Type descriptor="LServer/TextSocket;" role="TYPE_FOUND">
+      <SourceLine classname="Server.TextSocket" start="26" end="275" sourcefile="TextSocket.java" sourcepath="Server/TextSocket.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE">
+    <Class classname="Server.ScreenShot">
+      <SourceLine classname="Server.ScreenShot" sourcefile="ScreenShot.java" sourcepath="Server/ScreenShot.java"/>
+    </Class>
+    <Method classname="Server.ScreenShot" name="&lt;init&gt;" signature="(Ljava/util/Date;Ljava/lang/String;Ljava/awt/image/BufferedImage;)V" isStatic="false">
+      <SourceLine classname="Server.ScreenShot" start="14" end="18" startBytecode="0" endBytecode="107" sourcefile="ScreenShot.java" sourcepath="Server/ScreenShot.java"/>
+    </Method>
+    <Field classname="Server.ScreenShot" name="created" signature="Ljava/util/Date;" isStatic="false">
+      <SourceLine classname="Server.ScreenShot" sourcefile="ScreenShot.java" sourcepath="Server/ScreenShot.java"/>
+    </Field>
+    <LocalVariable name="taken" register="1" pc="6" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="Server.ScreenShot" start="15" end="15" startBytecode="6" endBytecode="6" sourcefile="ScreenShot.java" sourcepath="Server/ScreenShot.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ScreenShotDisplayer$ImagePanel">
+      <SourceLine classname="Server.ScreenShotDisplayer$ImagePanel" sourcefile="ScreenShotDisplayer.java" sourcepath="Server/ScreenShotDisplayer.java"/>
+    </Class>
+    <Field classname="Server.ScreenShotDisplayer$ImagePanel" name="image" signature="Ljava/awt/image/BufferedImage;" isStatic="false">
+      <SourceLine classname="Server.ScreenShotDisplayer$ImagePanel" sourcefile="ScreenShotDisplayer.java" sourcepath="Server/ScreenShotDisplayer.java"/>
+    </Field>
+    <Type descriptor="Ljava/awt/image/BufferedImage;" role="TYPE_FOUND">
+      <SourceLine classname="java.awt.image.BufferedImage"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.ServerFrame">
+      <SourceLine classname="Server.ServerFrame" sourcefile="ServerFrame.java" sourcepath="Server/ServerFrame.java"/>
+    </Class>
+    <Field classname="Server.ServerFrame" name="bank" signature="LServer/ImageBank;" isStatic="false">
+      <SourceLine classname="Server.ServerFrame" sourcefile="ServerFrame.java" sourcepath="Server/ServerFrame.java"/>
+    </Field>
+    <Type descriptor="LServer/ImageBank;" role="TYPE_FOUND">
+      <SourceLine classname="Server.ImageBank" start="37" end="84" sourcefile="ImageBank.java" sourcepath="Server/ImageBank.java"/>
+    </Type>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="Server.ServerFrame$10">
+      <SourceLine classname="Server.ServerFrame$10" start="484" end="488" sourcefile="ServerFrame.java" sourcepath="Server/ServerFrame.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE">
+    <Class classname="Server.TextPanel">
+      <SourceLine classname="Server.TextPanel" sourcefile="TextPanel.java" sourcepath="Server/TextPanel.java"/>
+    </Class>
+    <Field classname="Server.TextPanel" name="textOutput" signature="Ljava/io/PrintWriter;" isStatic="false">
+      <SourceLine classname="Server.TextPanel" sourcefile="TextPanel.java" sourcepath="Server/TextPanel.java"/>
+    </Field>
+    <Type descriptor="Ljava/io/PrintWriter;" role="TYPE_FOUND">
+      <SourceLine classname="java.io.PrintWriter"/>
+    </Type>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 13 Nov 2018 11:17:10 -0600" total_classes="55" referenced_classes="509" total_bugs="23" total_size="1866" num_packages="2" java_version="1.8.0_191" vm_version="25.191-b12" cpu_seconds="56.03" clock_seconds="191.62" peak_mbytes="346.58" alloc_mbytes="3607.50" gc_seconds="0.29" priority_3="17" priority_2="5" priority_1="1">
+    <PackageStats package="Server" total_bugs="23" total_types="52" total_size="1799" priority_3="17" priority_2="5" priority_1="1">
+      <ClassStats class="Server.Address" sourceFile="Address.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="Server.ByteArray" sourceFile="ByteArray.java" interface="false" size="100" bugs="0"/>
+      <ClassStats class="Server.ClientPanel" sourceFile="ClientPanel.java" interface="false" size="87" bugs="7" priority_3="6" priority_2="1"/>
+      <ClassStats class="Server.ClientPanel$1" sourceFile="ClientPanel.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="Server.ClientPanel$ImageRetrieverWorkerThread" sourceFile="ClientPanel.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="Server.ImageBank" sourceFile="ImageBank.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="Server.ImageBank$1" sourceFile="ImageBank.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer" sourceFile="ImageBank.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer$1" sourceFile="ImageBank.java" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer$2" sourceFile="ImageBank.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer$3" sourceFile="ImageBank.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer$3$1ImageSaverWorkerThread" sourceFile="ImageBank.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer$4" sourceFile="ImageBank.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="Server.ImageBank$ListDisplayer$5" sourceFile="ImageBank.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Server.ImageSocket" sourceFile="ImageSocket.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="Server.ImageSocket$ReusableByteArrayInputStream" sourceFile="ImageSocket.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="Server.LocalPortSocketAddress" sourceFile="LocalPortSocketAddress.java" interface="false" size="23" bugs="1" priority_3="1"/>
+      <ClassStats class="Server.Network" sourceFile="Network.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="Server.NetworkScanner" sourceFile="NetworkScanner.java" interface="false" size="166" bugs="1" priority_2="1"/>
+      <ClassStats class="Server.NetworkScanner$1" sourceFile="NetworkScanner.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="Server.NetworkScanner$ConnectionTester" sourceFile="NetworkScanner.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="Server.NetworkScanner$GarbageCollectorThread" sourceFile="NetworkScanner.java" interface="false" size="28" bugs="1" priority_1="1"/>
+      <ClassStats class="Server.ParentPanel" sourceFile="ParentPanel.java" interface="false" size="154" bugs="7" priority_3="5" priority_2="2"/>
+      <ClassStats class="Server.Recyclable" sourceFile="Recyclable.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="Server.ScreenShot" sourceFile="ScreenShot.java" interface="false" size="35" bugs="1" priority_2="1"/>
+      <ClassStats class="Server.ScreenShotDisplayer" sourceFile="ScreenShotDisplayer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="Server.ScreenShotDisplayer$1" sourceFile="ScreenShotDisplayer.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="Server.ScreenShotDisplayer$ImagePanel" sourceFile="ScreenShotDisplayer.java" interface="false" size="14" bugs="1" priority_3="1"/>
+      <ClassStats class="Server.ServerFrame" sourceFile="ServerFrame.java" interface="false" size="149" bugs="1" priority_3="1"/>
+      <ClassStats class="Server.ServerFrame$1" sourceFile="ServerFrame.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$10" sourceFile="ServerFrame.java" interface="false" size="7" bugs="1" priority_3="1"/>
+      <ClassStats class="Server.ServerFrame$2" sourceFile="ServerFrame.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$3" sourceFile="ServerFrame.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$4" sourceFile="ServerFrame.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$4$1" sourceFile="ServerFrame.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$4$1$1" sourceFile="ServerFrame.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$5" sourceFile="ServerFrame.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$5$1" sourceFile="ServerFrame.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$5$1$1" sourceFile="ServerFrame.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$6" sourceFile="ServerFrame.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$7" sourceFile="ServerFrame.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$8" sourceFile="ServerFrame.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$9" sourceFile="ServerFrame.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="Server.ServerFrame$HoverHandler" sourceFile="ServerFrame.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Server.TextFrame" sourceFile="TextFrame.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="Server.TextFrame$1" sourceFile="TextFrame.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="Server.TextFrame$2" sourceFile="TextFrame.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="Server.TextPanel" sourceFile="TextPanel.java" interface="false" size="44" bugs="1" priority_3="1"/>
+      <ClassStats class="Server.TextPanel$1" sourceFile="TextPanel.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="Server.TextPanel$2" sourceFile="TextPanel.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="Server.TextPanel$3" sourceFile="TextPanel.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="Server.TextSocket" sourceFile="TextSocket.java" interface="false" size="143" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="Util" total_bugs="0" total_types="3" total_size="67">
+      <ClassStats class="Util.Quotes" sourceFile="Quotes.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="Util.StreamCloser" sourceFile="StreamCloser.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="Util.ThreadSafeBoolean" sourceFile="ThreadSafeBoolean.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1696" invocations="2065" avgMicrosecondsPerInvocation="821" maxMicrosecondsPerInvocation="16027" standardDeviationMircosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="1097" invocations="2" avgMicrosecondsPerInvocation="548930" maxMicrosecondsPerInvocation="697707" standardDeviationMircosecondsPerInvocation="148777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1029" invocations="2060" avgMicrosecondsPerInvocation="499" maxMicrosecondsPerInvocation="20489" standardDeviationMircosecondsPerInvocation="1175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="763" invocations="509" avgMicrosecondsPerInvocation="1500" maxMicrosecondsPerInvocation="23257" standardDeviationMircosecondsPerInvocation="2947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="762" invocations="509" avgMicrosecondsPerInvocation="1497" maxMicrosecondsPerInvocation="41578" standardDeviationMircosecondsPerInvocation="3557"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="553" invocations="1242" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="29806" standardDeviationMircosecondsPerInvocation="1115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="314" invocations="268" avgMicrosecondsPerInvocation="1173" maxMicrosecondsPerInvocation="22828" standardDeviationMircosecondsPerInvocation="3051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="292" invocations="250" avgMicrosecondsPerInvocation="1171" maxMicrosecondsPerInvocation="57020" standardDeviationMircosecondsPerInvocation="4328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="270" invocations="266" avgMicrosecondsPerInvocation="1015" maxMicrosecondsPerInvocation="46778" standardDeviationMircosecondsPerInvocation="3744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="263" invocations="245" avgMicrosecondsPerInvocation="1074" maxMicrosecondsPerInvocation="51764" standardDeviationMircosecondsPerInvocation="3879"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="236" invocations="509" avgMicrosecondsPerInvocation="463" maxMicrosecondsPerInvocation="13313" standardDeviationMircosecondsPerInvocation="1052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="204" invocations="509" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="42104" standardDeviationMircosecondsPerInvocation="1968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="192" invocations="248" avgMicrosecondsPerInvocation="774" maxMicrosecondsPerInvocation="22961" standardDeviationMircosecondsPerInvocation="2211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="167" invocations="589" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="22736" standardDeviationMircosecondsPerInvocation="1081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="160" invocations="509" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="18940" standardDeviationMircosecondsPerInvocation="1060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="158" invocations="509" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="13042" standardDeviationMircosecondsPerInvocation="933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="158" invocations="2002" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="26247" standardDeviationMircosecondsPerInvocation="622"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="151" invocations="509" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="31288" standardDeviationMircosecondsPerInvocation="1971"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="148" invocations="250" avgMicrosecondsPerInvocation="593" maxMicrosecondsPerInvocation="20903" standardDeviationMircosecondsPerInvocation="1621"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="143" invocations="55" avgMicrosecondsPerInvocation="2603" maxMicrosecondsPerInvocation="136842" standardDeviationMircosecondsPerInvocation="18268"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
